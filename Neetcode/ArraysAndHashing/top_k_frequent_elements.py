@@ -26,6 +26,7 @@ class Solution(object):
         top_k = []
 
         # loop backwards through counts list since the list goes from least frequent -> most frequent
+        # REMEMBER: our end point is 0 and not -1 because there will be no value for the 0 index
         for i in range(len(counts) - 1, 0, -1):
             # add every number in the inner list to return value until k nums found
             for num in counts[i]:
