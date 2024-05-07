@@ -1,5 +1,3 @@
-
-"""
 class Solution(object):
     def isPalindrome(self, s):
         converted_s = ""
@@ -18,5 +16,3 @@ class Solution(object):
             j -= 1
 
         return True
-
-"""
