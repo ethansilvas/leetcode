@@ -13,9 +13,14 @@ class Solution(object):
         max_frequent = 0
 
         for right in range(len(s)):
+            # increase count of current element
+            # then modify the most frequent value we have looked at
             counts[s[right]] = counts.get(s[right], 0) + 1
             max_frequent = max(max_frequent, counts[s[right]])
 
+            # calculate the number of characters that aren't our most frequent character
+            # then compare that number to k to see how many from the left we should remove
+            # make sure to update the counts before increasing left
             while (right - left + 1) - max_frequent > k:
                 counts[s[left]] -= 1
                 left += 1
